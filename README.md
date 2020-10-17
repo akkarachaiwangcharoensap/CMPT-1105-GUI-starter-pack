@@ -1,4 +1,4 @@
-# CMPT-GUI-starter-pack
+# CMPT 1105 | GUI Starter Pack
 
 ```python
 from tkinter import *
