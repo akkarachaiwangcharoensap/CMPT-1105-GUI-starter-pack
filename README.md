@@ -193,6 +193,7 @@ class GUI:
 gui = GUI()
 ```
 `------------------------`
+
 GUI - Capital Cities
 ```python
 from tkinter import *
