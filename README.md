@@ -10,7 +10,7 @@ class GUI:
 
 gui = GUI()
 ```
-
+`------------------------`
 ```python
 from tkinter import *
 
@@ -25,7 +25,7 @@ class GUI:
 
 gui = GUI()
 ```
-
+`------------------------`
 ```python
 from tkinter import *
 
@@ -43,7 +43,7 @@ class GUI:
 
 gui = GUI()
 ```
-
+`------------------------`
 ```python
 from tkinter import *
 
@@ -69,3 +69,4 @@ class GUI:
 
 gui = GUI()
 ```
+`------------------------`
