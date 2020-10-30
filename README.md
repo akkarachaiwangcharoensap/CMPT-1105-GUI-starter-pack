@@ -372,4 +372,63 @@ class GUI:
 gui = GUI()
 ```
 
+@credit goes to Anmol from our Discord group.
+```python
+from tkinter import *
+import tkinter.messagebox
+class myGUI:
+    def __init__(self):
+        self.main_window = Tk()
+        self.main_window.geometry("300x300+100+100")
+        self.main_window.title("Douglas College")
+        self.frame1 = Frame(self.main_window, width = 280, height = 240 )
+        self.frame1.place(x = 10, y = 10)
+        self.choice1 = IntVar()
+        self.choice2 = IntVar()
+        self.choice3 = IntVar()
+        self.choice4 = IntVar()
+        
+        self.choice1.set(0)
+        self.choice2.set(0)
+        self.choice3.set(0)
+        self.choice4.set(0)
+        
+        self.cb1 = Checkbutton(self.frame1,text="Oil Change - $35",font=14,
+                               variable=self.choice1)
+        self.cb1.place(x=40,y=40)
+
+        self.cb2 = Checkbutton(self.frame1,text="Inspection - $50",font=14,
+                               variable=self.choice2)
+        self.cb2.place(x=40,y=75)
+
+        self.cb3 = Checkbutton(self.frame1,text="Muffler Replacement - $100",font=14,
+                               variable=self.choice3)
+        self.cb3.place(x=40,y=110)
+
+        self.cb4 = Checkbutton(self.frame1,text="Tire Rotation- $20",font=14,
+                               variable=self.choice4)
+        self.cb4.place(x=40,y=145)
+
+        self.clickButton = Button(self.frame1, text="Total", font=("Arial", 16), command=self.do_this)
+        self.clickButton.place(x=10, y=180)
+        mainloop()
+    def do_this(self):
+        total = 0
+        if self.choice1.get():
+            total += 35
+            
+        if self.choice2.get():
+            total += 50
+              
+        if self.choice3.get():
+            total += 100
+            
+        if self.choice4.get():
+            total += 20
+
+        tkinter.messagebox.showinfo("Response", "Your Total is:$ " + str(total))
+                
+my_gui = myGUI()
+```
+
 
