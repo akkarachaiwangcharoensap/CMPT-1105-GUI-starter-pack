@@ -324,3 +324,52 @@ class GUI:
                 
 gui = GUI()
 ```
+
+```python
+from tkinter import *
+import tkinter.messagebox
+
+class GUI:
+        def __init__(this):
+            this.window = Tk()
+
+            # Determine the size and location of the main window
+            this.window.geometry("600x400+200+100")
+
+            # Windows title
+            this.window.title("Douglas College")
+
+            # Frame A
+            this.frameA = Frame(this.window, width=280, height=300, bg="green")
+            this.frameA.place(x=10,y=10)
+
+
+           # Choice
+            this.choice = StringVar()
+            this.choice.set("Tea")
+
+            this.teaRadio = Radiobutton(this.frameA, text="Tea", font=14, variable=this.choice, value="Tea")
+            this.teaRadio.place(x=10, y=40)
+
+            this.coffeeRadio = Radiobutton(this.frameA, text="Coffee", font=14, variable=this.choice, value="Coffee")
+            this.coffeeRadio.place(x=10, y=75)
+
+            this.hotChocolateRadio = Radiobutton(this.frameA, text="Hot Chocolate", font=14, variable=this.choice, value="Hot Chocolate")
+            this.hotChocolateRadio.place(x=10, y=110)
+           
+            this.clickButton = Button(this.frameA, text="OK", font=("Arial", 16), command=this.selection)
+            this.clickButton.place(x=10, y=150)
+
+            this.exitButton = Button(this.frameA, text="Exit", font=("Arial", 16), command=this.window.destroy)
+            this.exitButton.place(x=10, y=200)
+
+            mainloop()
+
+        def selection (this):
+                message = "You like " + this.choice.get()
+                tkinter.messagebox.showinfo("Selection ", message)
+
+gui = GUI()
+```
+
+
